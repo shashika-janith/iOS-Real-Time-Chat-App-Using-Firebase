@@ -31,6 +31,8 @@ class ChannelListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupUI()
+        
         listener = channelRef.addSnapshotListener({documentSnapshot, error in
             guard let document = documentSnapshot else {
                 debugPrint("Error listening for chanel updates.")
@@ -52,6 +54,10 @@ class ChannelListViewController: UIViewController {
             return
         }
         tableView.deselectRow(at: index, animated: true)
+    }
+    
+    private func setupUI() {
+        tableView.tableFooterView = UIView()
     }
     
     private func handleChange(change: DocumentChange) {

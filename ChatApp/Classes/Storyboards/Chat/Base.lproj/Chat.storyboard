@@ -22,7 +22,7 @@
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" id="THX-yZ-5Xo" customClass="ChannelTableViewCell" customModule="ChatApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelTableViewCell" focusStyle="custom" id="THX-yZ-5Xo" customClass="ChannelTableViewCell" customModule="ChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="THX-yZ-5Xo" id="Dsd-2X-RcY">
@@ -153,6 +153,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="lblMessage" destination="w9n-Ab-XvQ" id="hqy-to-0eF"/>
+                                            <outlet property="messageContainer" destination="UH9-o0-UVn" id="Fyu-Vk-5Nx"/>
                                             <outlet property="senderName" destination="FJB-RP-xuX" id="Bum-pU-c44"/>
                                         </connections>
                                     </tableViewCell>
@@ -202,6 +203,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="lblMessage" destination="AqH-s3-glI" id="LAi-0k-fwI"/>
+                                            <outlet property="messageContainer" destination="nU7-yW-gzC" id="M0D-ci-y36"/>
                                             <outlet property="senderName" destination="hu8-oR-J93" id="PfB-mS-dCl"/>
                                         </connections>
                                     </tableViewCell>
@@ -267,7 +269,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GA-XS-nAg">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="90"/>
-                                        <state key="normal" image="ic_image"/>
+                                        <state key="normal" image="ic_gallery"/>
                                         <connections>
                                             <action selector="onImageBtnTapped:" destination="vaW-fi-l7s" eventType="touchUpInside" id="alY-pm-RSK"/>
                                         </connections>
@@ -279,7 +281,7 @@
                                                 <rect key="frame" x="5" y="5" width="261" height="80"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="FH8-VU-HWr"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="FH8-VU-HWr"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="250" constant="130" id="bAi-Fk-mji"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -302,7 +304,7 @@
                                             <constraint firstAttribute="width" constant="40" id="mts-i1-enJ"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="Send" image="ic_send"/>
                                         <connections>
                                             <action selector="onSendBtnTapped:" destination="vaW-fi-l7s" eventType="touchUpInside" id="07K-nl-eYS"/>
@@ -366,7 +368,7 @@
     </scenes>
     <resources>
         <image name="ic_add" width="20" height="20"/>
-        <image name="ic_image" width="18.666666030883789" height="14.666666984558105"/>
+        <image name="ic_gallery" width="33.333332061767578" height="28.666666030883789"/>
         <image name="ic_send" width="33" height="28.666666030883789"/>
     </resources>
 </document>

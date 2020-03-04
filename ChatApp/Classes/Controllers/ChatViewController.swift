@@ -69,7 +69,7 @@ class ChatViewController: UIViewController {
     private func setupUI() {
         containerTxtViewMessage.roundCorners(cornerRadius: 15.0)
         navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.title = channel?.name
+        navigationController?.navigationBar.topItem?.title = channel?.name
     }
     
 //    override func viewDidDisappear(_ animated: Bool) {

@@ -12,10 +12,12 @@ class ChatReceivedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var senderName: UILabel!
+    @IBOutlet weak var messageContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        messageContainer.roundCorners(cornerRadius: 5.0)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -79,6 +79,7 @@ extension Message {
 }
 
 extension Message: Comparable {
+    
     static func < (lhs: Message, rhs: Message) -> Bool {
         let order = lhs.created.compare(rhs.created)
         
@@ -90,7 +91,6 @@ extension Message: Comparable {
         case .orderedSame:
             return true
         }
-        
     }
     
     static func == (lhs: Message, rhs: Message) -> Bool {

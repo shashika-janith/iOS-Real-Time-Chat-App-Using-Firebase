@@ -16,7 +16,6 @@ class ChannelTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.contentView.roundCorners(cornerRadius: 5.0)
     }
     
     static func cellId() -> String {
